@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1Page</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5a591b52-ae21-4568-b128-fcee6b3338a0" class="page sans"><header><h1 class="page-title">1Page</h1><p class="page-description"></p></header><div class="page-body"><p id="033b8ff7-3010-4c56-be95-8b2cc87956f2" class="">
+</p><p id="382a1294-d4a9-47d2-af10-c48d0afbb298" class="">
+</p><div id="2aa5d743-c91b-4527-af81-ece7ecd86dc5" class="column-list"><div id="7ced452a-d2fa-40bf-aede-cec09f28bffa" style="width:50%" class="column"><h1 id="fd4d9b58-9404-41eb-b1f4-94970e75e49c" class=""><mark class="highlight-blue_background">Cut through the noise</mark> and get your website to speak for you</h1><p id="a964dbcf-532f-4954-b0a5-df613c06283a" class="">
+</p><blockquote id="880d6af3-0364-420e-b4d8-ab8b0d36c5f1" class="block-color-gray_background">We are a web design agency with a passion for the user experience, we put user at the centre of everything we do.</blockquote><p id="8ee108e5-686d-4188-a7f7-6a30fe9f5679" class="">
+</p><h3 id="68c41ef4-70a9-421d-bd67-c7e8ea0d82e7" class=""><a href="1Page%205a591b52ae214568b128fcee6b3338a0.html"><strong>Request a Quote</strong></a></h3><p id="75a8aa33-7016-4a0a-883d-afbec20c7a24" class="">
+</p></div><div id="969dd627-f2eb-4b6c-968b-e68d6e626e71" style="width:50%" class="column"><figure id="4233d449-2f5c-40ed-ac07-d33cfa35964e" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/LP-Insp.png"><img style="width:528px" src="1Page%205a591b52ae214568b128fcee6b3338a0/LP-Insp.png"/></a></figure></div></div><p id="20f60e53-9060-41a3-800c-6fdb12e7c598" class="">                                                                             </p><h1 id="5609b95e-1a88-49e0-ab00-575c7ec158e0" class="">                                                               ↓        </h1><h1 id="05a81a92-7eb5-4e6c-bd8e-d918463e3fee" class="">                                          🎯 Services we offer</h1><p id="97312f90-a033-411e-837d-49b7b1549ad2" class="">At 1Page, we create beautifully simple websites using a unique mix of design, technology and craftsmanship. </p><p id="838e764e-3ead-4f6b-bf8c-31432f7d7bd3" class="">We&#x27;ve been creating beautiful websites for with an emphasis on user experience (UX), usability for mobile devices, and the longterm viability of the site.</p><div id="6c36a92b-aa67-42ae-8ac7-5742ed09a3e0" class="column-list"><div id="077f6572-3069-4239-98d8-0c27159a54bc" style="width:12.5%" class="column"><p id="764c1ee1-1f4e-4cb6-92bb-734b5a1b863f" class="">
+</p></div><div id="bd9dab93-0769-4fba-bea2-e326cfa4dbe2" style="width:45.83333333333333%" class="column"><h1 id="deefc5a4-56e1-475f-a783-f27905df58e3" class="">🎨</h1><blockquote id="c744d7d7-7f80-447a-9bef-63886ead2a35" class=""><strong>Branding</strong></blockquote><ul id="b906864e-685f-4f0a-8a3f-84d9cd0a3397" class="bulleted-list"><li style="list-style-type:disc">Logo Design</li></ul><ul id="c9036993-7342-4acb-b829-faf826aca606" class="bulleted-list"><li style="list-style-type:disc">Visual Branding</li></ul><ul id="f720c38c-45b4-4b3e-ab5e-601cc8d1f7ea" class="bulleted-list"><li style="list-style-type:disc">Design Assets</li></ul></div><div id="c3dba086-8591-439e-8d7c-c351923e30e1" style="width:41.66666666666667%" class="column"><h1 id="d201a5ef-0505-4f60-bbb4-eaabb4f764b4" class="">💬</h1><blockquote id="caef3386-77c0-4f7f-9d62-279371d3352f" class=""><strong>UI/UX Design</strong></blockquote><ul id="0186a79d-6a6f-4ea1-b943-4fbf1eaf573d" class="bulleted-list"><li style="list-style-type:disc">Mobile Applications</li></ul><ul id="56cd87c6-d081-40be-8da8-15e4695d4cd3" class="bulleted-list"><li style="list-style-type:disc">Web Applications</li></ul></div></div><div id="5365bc33-098a-404d-b78d-73d205411537" class="column-list"><div id="9793f65d-20c0-4f94-921e-44aed58cef03" style="width:12.5%" class="column"><p id="fab7d76c-5b6b-4388-beb2-065977ada0c5" class="">
+</p></div><div id="aeeb6f08-3dcf-463c-a920-51539152aeb6" style="width:45.83333333333333%" class="column"><h1 id="ec276266-2006-414d-bd5d-79e30837d886" class="">🌐</h1><blockquote id="1b358e70-3572-4a01-90c9-9d9e2b82f031" class=""><strong>Web Design</strong></blockquote><ul id="adf83789-6040-4cc6-a94a-8b42b4416415" class="bulleted-list"><li style="list-style-type:disc">Webflow</li></ul><ul id="8634d287-9f47-438c-935b-1f97bd54f61b" class="bulleted-list"><li style="list-style-type:disc">Carrd</li></ul><ul id="6c6acc69-9594-426e-833c-9bfa4398d3f7" class="bulleted-list"><li style="list-style-type:disc">WordPress</li></ul></div><div id="f25ee113-93ea-49e7-8340-c5ffe8f0e266" style="width:41.666666666666686%" class="column"><h1 id="28ce3f61-dfe1-4ce1-ac18-914faba3132a" class=""><strong>🛒</strong></h1><blockquote id="bd550e59-e827-4c9e-bdf9-424c45f1ffdc" class="">Ecommerce</blockquote><ul id="3a49783f-7e3b-4d09-a995-26152953d6e7" class="bulleted-list"><li style="list-style-type:disc">Shopify</li></ul><ul id="47f8d747-52a2-45b6-b57b-4876c4363a09" class="bulleted-list"><li style="list-style-type:disc">WooCommerce</li></ul><ul id="0c52c13c-d033-44da-bf01-9dbb22345ac3" class="bulleted-list"><li style="list-style-type:disc">Squarespace</li></ul></div></div><p id="efa3f4ed-39bf-41b4-b45b-59f71b7fa0c7" class="">
+</p><p id="6f60cd2d-de1d-4957-957c-b555b56681b4" class="">
+</p><h1 id="ed716c32-0954-4eb8-9649-bfd8f1edf7cc" class="">                                          👨‍💻 Our future customers</h1><div id="dd428867-a768-490a-9e3d-04df728d4501" class="column-list"><div id="eb034549-e866-4425-874d-ee8166108eb4" style="width:29.166666666666664%" class="column"><figure id="7c2eddbc-5b8a-4f7d-85aa-35e611ffd927" class="image"><a href="https://www.teampay.co/wp-content/uploads/2019/06/Gumroad-Logo.png"><img style="width:288px" src="https://www.teampay.co/wp-content/uploads/2019/06/Gumroad-Logo.png"/></a></figure></div><div id="6e010b53-0f2d-4220-803a-e8bbf72635e7" style="width:33.333333333333336%" class="column"><figure id="33614f51-9938-490f-8eb0-29795f094500" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/potion.so872https3A2F2Fs3-us-west-2.amazonaws.com2Fsecure.notion-static.com2Fbc713c90-c4a0-4ca6-aeef-31e3b10dd4712Fpotion_logo_transparent_2.png"><img style="width:240px" src="1Page%205a591b52ae214568b128fcee6b3338a0/potion.so872https3A2F2Fs3-us-west-2.amazonaws.com2Fsecure.notion-static.com2Fbc713c90-c4a0-4ca6-aeef-31e3b10dd4712Fpotion_logo_transparent_2.png"/></a></figure><p id="4579b46b-5958-4f22-8959-7039567f4a23" class="">
+</p></div><div id="171803f1-240b-4836-a72e-5ff061429e55" style="width:37.49999999999992%" class="column"><figure id="3ee01348-b906-4aff-9f4f-684c6a6e6ffd" class="image"><a href="http://wbnaboise.org/wp-content/uploads/2021/01/zoom-logo-transparent.png"><img style="width:192px" src="http://wbnaboise.org/wp-content/uploads/2021/01/zoom-logo-transparent.png"/></a></figure></div></div><h1 id="b96c8071-bdbc-443c-99f2-665452037f19" class="">                                                    📎  Portfolio</h1><p id="a22c9b81-3880-434f-9a46-b416c732550d" class="">
+</p><p id="41255c03-ef54-4daa-ba4b-04680bc8a24c" class="">
+</p><div id="fcde8ab0-c7f9-4d15-84d2-cbbc7a260540" class="column-list"><div id="bd40974a-2f23-42b9-a292-0a093cfad97d" style="width:50%" class="column"><figure id="9ce3b061-7077-4f63-ad64-27daabe28cd4" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/Webde.png"><img style="width:432px" src="1Page%205a591b52ae214568b128fcee6b3338a0/Webde.png"/></a><figcaption><a href="https://dribbble.com/ghulaam-rasool">Ghulam Rasool</a> 🚀 for <a href="https://dribbble.com/shots/15405230-Furniture-Landing-Page-Design">Cuberto/Dribble</a></figcaption></figure><figure id="776d752f-c2bc-450e-8190-7edaf0d8d07d" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/Webde%201.png"><img style="width:432px" src="1Page%205a591b52ae214568b128fcee6b3338a0/Webde%201.png"/></a><figcaption><a href="https://dribbble.com/ghulaam-rasool">Ghulam Rasool</a> 🚀 for <a href="https://dribbble.com/shots/15405230-Furniture-Landing-Page-Design">Cuberto/Dribble</a></figcaption></figure><p id="9e3028de-27ba-48ff-8902-3614198338e9" class="">
+</p></div><div id="1d61962c-c0fd-45e2-9e4d-8d92a34552bd" style="width:50%" class="column"><figure id="a1918227-376f-4bab-933f-5fb5749a51d6"><div class="source"><a href="https://cdn.dribbble.com/users/1579320/screenshots/15467437/media/dfb615940ed4187e0d72a6a3d168dfe6.mp4">https://cdn.dribbble.com/users/1579320/screenshots/15467437/media/dfb615940ed4187e0d72a6a3d168dfe6.mp4</a></div><figcaption><a href="https://dribbble.com/plakhotin">Andrey</a> and <a href="https://dribbble.com/Skywent">Bogdan</a> for <a href="https://dribbble.com/ugem">UGEM/Dribble</a></figcaption></figure><p id="d99ea33c-6b38-4959-8b4c-b87194293449" class="">
+</p><figure id="e861d42f-e8e7-46c5-932d-4db862b3e239" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/Webde%202.png"><img style="width:432px" src="1Page%205a591b52ae214568b128fcee6b3338a0/Webde%202.png"/></a><figcaption><a href="https://dribbble.com/ghulaam-rasool">Ghulam Rasool</a> 🚀 for <a href="https://dribbble.com/shots/15405230-Furniture-Landing-Page-Design">Cuberto/Dribble</a></figcaption></figure></div></div><h1 id="70f45b05-c9ef-4950-a745-f4e3165efdff" class="">                                                    🙏 Testimonials</h1><p id="892e865f-a804-4d7f-9be2-c9fa45494265" class="">
+</p><div id="9b04829d-f057-43c6-8d9c-d1629575029b" class="column-list"><div id="30f30569-1865-45de-bf13-5cedda9efe49" style="width:33.33333333333333%" class="column"><blockquote id="4bdfa376-904e-4979-8b5f-745597d8dbe9" class="">Thank you for such elegant and amazing work you guys do! </blockquote><p id="e6256382-4ec7-4559-8479-4da611a58a98" class="">  <strong>-Peter Finn</strong></p><p id="c6824c54-8427-479d-9f7f-17c70f826f54" class="">        </p><p id="8c6b91d6-f4d6-4fcb-822b-6e9bbd5c1ed9" class="">
+</p></div><div id="cd539806-a1cc-4caf-80ec-62c1a8d0996d" style="width:33.33333333333334%" class="column"><blockquote id="9302a700-fc5c-4845-be3f-1c1a1c58205e" class="">Highly recommend if someone is looking for web design services</blockquote><p id="8fbb3ab7-5eaa-4543-a461-869390ba2dec" class="">   -<strong>Ayush</strong></p><p id="df63f12a-818a-4eed-8edd-16c7f4a73959" class="">
+</p></div><div id="fa83d280-962b-466c-a47e-ad9f18f24735" style="width:33.33333333333334%" class="column"><blockquote id="47ea6c7a-cca2-4771-a051-5ba34beb8ed6" class="">We can vouch for 1page, they&#x27;re the best at what they do</blockquote><p id="0b288271-0dfc-47f5-b05d-e248d07794c6" class="">     <strong>-John Doe</strong></p><p id="f9f9a0a9-0edc-4df7-a074-478c34de0be3" class="">
+</p></div></div><h1 id="86bdfe30-40f2-4991-ae00-3da4497f185a" class="">                                                   📇 Get in touch</h1><div id="64869601-7706-44b6-8d79-41f23dc55037" class="column-list"><div id="91ae59d1-7e0d-4764-a1e9-42eb956bc99e" style="width:56.25%" class="column"><figure id="9cc34ff5-dfe9-4c94-b3cb-980658b0adcd"><div class="source"><a href="https://chilipepper.io/form/melting-darkgreen-pepper-e7aec85d-0957-46fa-8e40-2c992c614469">https://chilipepper.io/form/melting-darkgreen-pepper-e7aec85d-0957-46fa-8e40-2c992c614469</a></div></figure></div><div id="4a6b4d6c-bccc-474a-a55b-b6f200cd979c" style="width:43.75%" class="column"><figure id="7efedd09-b799-48ac-ae25-fb9892c6fdd3" class="image"><a href="1Page%205a591b52ae214568b128fcee6b3338a0/web-design.png"><img style="width:432px" src="1Page%205a591b52ae214568b128fcee6b3338a0/web-design.png"/></a></figure></div></div><hr id="97f26dc9-466a-4013-a96d-d9d888c2f005"/><div id="7d54d265-290e-4910-8c82-5d48414cef06" class="column-list"><div id="0b64bab4-02c6-431c-9957-020b5d9250f5" style="width:21.20640904806786%" class="column"><blockquote id="53202adb-8d6b-4ddb-995e-7d2685441ee2" class="block-color-blue"><a href="http://facebook.com">Facebook</a></blockquote></div><div id="9be90977-1066-4281-bc24-3cff7c5dd3cf" style="width:18.850141376060325%" class="column"><blockquote id="1b4a3476-414d-4387-b97b-6a246bdfc860" class=""><a href="http://potion.so">Website</a></blockquote></div><div id="1f6b0820-22de-4943-8d73-e21b7b5cef58" style="width:21.20640904806786%" class="column"><blockquote id="29a1a5a1-b3e6-4dd6-af78-ada29b435c29" class="block-color-blue"><a href="http://linkedin.com">LinkedIn</a></blockquote></div><div id="ddb227bd-c42b-4855-9da5-320de8eda1de" style="width:18.850141376060325%" class="column"><blockquote id="378d9d8e-2021-4855-af75-4fa5d7d61422" class="block-color-orange"><a href="http://instagram.com">Instagram</a></blockquote></div><div id="3192e5f1-c666-4a9c-be3d-3f769d015125" style="width:19.886899151743638%" class="column"><blockquote id="dfb528e0-215b-4299-bde8-e59b844f7c97" class="block-color-blue"><a href="http://twitter.com/potion_so">Twitter</a></blockquote></div></div><p id="41027b2e-8706-47ee-ab54-bd9589f589bf" class="">
+</p></div></article></body></html>
